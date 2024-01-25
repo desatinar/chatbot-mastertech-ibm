@@ -133,7 +133,7 @@ const chatbotSteps = (updateValues) => {
         }
     ];
 
-    return steps
+    return steps;
 } 
 
 export default chatbotSteps;

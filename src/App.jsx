@@ -1,8 +1,8 @@
-import ChatBot from 'react-simple-chatbot'
-import chatbotSteps from './chatbotSteps'
-import chatbot from './assets/chatbot.png'
-import user from './assets/user.png'
-import { useEffect, useState } from 'react'
+import ChatBot from 'react-simple-chatbot';
+import chatbotSteps from './chatbotSteps';
+import chatbot from './assets/chatbot.png';
+import user from './assets/user.png';
+import { useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
 
 function App() {
@@ -14,9 +14,9 @@ function App() {
         setName,
         setDayOfWeek,
         setTimeOfDay,
-    }
+    };
 
-    const steps = chatbotSteps(updateValues)
+    const steps = chatbotSteps(updateValues);
 
     useEffect(() => {
         name && dayOfWeek && timeOfDay && (
@@ -25,10 +25,10 @@ function App() {
                     title: "Sucesso!",
                     text: `Pronto, ${name}! Sua consulta está agendada para ${dayOfWeek} no horário da ${timeOfDay}. Mal posso esperar para ajudar você! Se precisar de mais alguma coisa, estou à disposição. Até lá! 😊`,
                     icon: "success"
-                })
+                });
             }, 5000)
-        )
-    }, [name, dayOfWeek, timeOfDay])
+        );
+    }, [name, dayOfWeek, timeOfDay]);
 
     return (
         <>
@@ -41,4 +41,4 @@ function App() {
     )
 }
 
-export default App
+export default App;
